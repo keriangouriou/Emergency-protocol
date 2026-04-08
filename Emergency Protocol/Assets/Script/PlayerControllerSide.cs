@@ -6,12 +6,15 @@ public class PlayerControllerSide : MonoBehaviour
     private CharacterController controller;
 
     private Vector2 moveInput;
-    private float speed = 5f;
-    private float screenSpeed = 3f;
+    private float speed = 10f;
+    private float screenSpeed;
+    private Transform screenCenterTransform;
 
     private void Awake()
     {
         controller = GetComponent<CharacterController>();
+        screenSpeed = GameObject.Find("ScreenCenter").GetComponent<ScreenCenterMovement>().screenSpeed;
+        screenCenterTransform = GameObject.Find("ScreenCenter").transform;
     }
 
     // Update is called once per frame
