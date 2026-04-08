@@ -126,6 +126,15 @@ public partial class @CharacterInput: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Switch"",
+                    ""type"": ""Button"",
+                    ""id"": ""379877c0-0021-4891-b3e5-6677d322d4a4"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": ""Press"",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -260,6 +269,120 @@ public partial class @CharacterInput: IInputActionCollection2, IDisposable
                     ""action"": ""StopJump"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""e8d9b74b-20b5-48a5-9da5-5459cd1d22bb"",
+                    ""path"": ""<Keyboard>/n"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Switch"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
+        },
+        {
+            ""name"": ""PlayerSide"",
+            ""id"": ""890b0e2b-3094-4cee-b588-fe85146c4687"",
+            ""actions"": [
+                {
+                    ""name"": ""Move"",
+                    ""type"": ""Value"",
+                    ""id"": ""5516c56d-64d2-4680-86d1-48d3189efba6"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Switch"",
+                    ""type"": ""Button"",
+                    ""id"": ""822f69ce-a47b-4548-ae25-60251dc3ca5b"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": ""Press"",
+                    ""initialStateCheck"": false
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": ""2D Vector"",
+                    ""id"": ""01eed104-71d7-48ab-b1d5-5a32083adbe0"",
+                    ""path"": ""2DVector"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""up"",
+                    ""id"": ""ab0afb5a-cc33-46fd-bf9d-10edeaf247cd"",
+                    ""path"": ""<Keyboard>/w"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Keyboard&Mouse"",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""down"",
+                    ""id"": ""093a9924-24ed-4566-8736-dc374237f305"",
+                    ""path"": ""<Keyboard>/s"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Keyboard&Mouse"",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""left"",
+                    ""id"": ""f94af04d-4d35-4401-8063-cf4e09a90ae3"",
+                    ""path"": ""<Keyboard>/a"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Keyboard&Mouse"",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""right"",
+                    ""id"": ""ff243dc1-dca3-42eb-9701-ba4f399cd634"",
+                    ""path"": ""<Keyboard>/d"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Keyboard&Mouse"",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""efe84d6c-1ac9-4c2b-ae9d-f92627228ba6"",
+                    ""path"": ""<Gamepad>/leftStick"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""1e8c37f8-d3a9-4d98-a3b5-b9ec0904b1fb"",
+                    ""path"": ""<Keyboard>/n"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Keyboard&Mouse"",
+                    ""action"": ""Switch"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -300,11 +423,17 @@ public partial class @CharacterInput: IInputActionCollection2, IDisposable
         m_PlayerFPS_Look = m_PlayerFPS.FindAction("Look", throwIfNotFound: true);
         m_PlayerFPS_Jump = m_PlayerFPS.FindAction("Jump", throwIfNotFound: true);
         m_PlayerFPS_StopJump = m_PlayerFPS.FindAction("StopJump", throwIfNotFound: true);
+        m_PlayerFPS_Switch = m_PlayerFPS.FindAction("Switch", throwIfNotFound: true);
+        // PlayerSide
+        m_PlayerSide = asset.FindActionMap("PlayerSide", throwIfNotFound: true);
+        m_PlayerSide_Move = m_PlayerSide.FindAction("Move", throwIfNotFound: true);
+        m_PlayerSide_Switch = m_PlayerSide.FindAction("Switch", throwIfNotFound: true);
     }
 
     ~@CharacterInput()
     {
         UnityEngine.Debug.Assert(!m_PlayerFPS.enabled, "This will cause a leak and performance issues, CharacterInput.PlayerFPS.Disable() has not been called.");
+        UnityEngine.Debug.Assert(!m_PlayerSide.enabled, "This will cause a leak and performance issues, CharacterInput.PlayerSide.Disable() has not been called.");
     }
 
     /// <summary>
@@ -384,6 +513,7 @@ public partial class @CharacterInput: IInputActionCollection2, IDisposable
     private readonly InputAction m_PlayerFPS_Look;
     private readonly InputAction m_PlayerFPS_Jump;
     private readonly InputAction m_PlayerFPS_StopJump;
+    private readonly InputAction m_PlayerFPS_Switch;
     /// <summary>
     /// Provides access to input actions defined in input action map "PlayerFPS".
     /// </summary>
@@ -411,6 +541,10 @@ public partial class @CharacterInput: IInputActionCollection2, IDisposable
         /// Provides access to the underlying input action "PlayerFPS/StopJump".
         /// </summary>
         public InputAction @StopJump => m_Wrapper.m_PlayerFPS_StopJump;
+        /// <summary>
+        /// Provides access to the underlying input action "PlayerFPS/Switch".
+        /// </summary>
+        public InputAction @Switch => m_Wrapper.m_PlayerFPS_Switch;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
@@ -449,6 +583,9 @@ public partial class @CharacterInput: IInputActionCollection2, IDisposable
             @StopJump.started += instance.OnStopJump;
             @StopJump.performed += instance.OnStopJump;
             @StopJump.canceled += instance.OnStopJump;
+            @Switch.started += instance.OnSwitch;
+            @Switch.performed += instance.OnSwitch;
+            @Switch.canceled += instance.OnSwitch;
         }
 
         /// <summary>
@@ -472,6 +609,9 @@ public partial class @CharacterInput: IInputActionCollection2, IDisposable
             @StopJump.started -= instance.OnStopJump;
             @StopJump.performed -= instance.OnStopJump;
             @StopJump.canceled -= instance.OnStopJump;
+            @Switch.started -= instance.OnSwitch;
+            @Switch.performed -= instance.OnSwitch;
+            @Switch.canceled -= instance.OnSwitch;
         }
 
         /// <summary>
@@ -505,6 +645,113 @@ public partial class @CharacterInput: IInputActionCollection2, IDisposable
     /// Provides a new <see cref="PlayerFPSActions" /> instance referencing this action map.
     /// </summary>
     public PlayerFPSActions @PlayerFPS => new PlayerFPSActions(this);
+
+    // PlayerSide
+    private readonly InputActionMap m_PlayerSide;
+    private List<IPlayerSideActions> m_PlayerSideActionsCallbackInterfaces = new List<IPlayerSideActions>();
+    private readonly InputAction m_PlayerSide_Move;
+    private readonly InputAction m_PlayerSide_Switch;
+    /// <summary>
+    /// Provides access to input actions defined in input action map "PlayerSide".
+    /// </summary>
+    public struct PlayerSideActions
+    {
+        private @CharacterInput m_Wrapper;
+
+        /// <summary>
+        /// Construct a new instance of the input action map wrapper class.
+        /// </summary>
+        public PlayerSideActions(@CharacterInput wrapper) { m_Wrapper = wrapper; }
+        /// <summary>
+        /// Provides access to the underlying input action "PlayerSide/Move".
+        /// </summary>
+        public InputAction @Move => m_Wrapper.m_PlayerSide_Move;
+        /// <summary>
+        /// Provides access to the underlying input action "PlayerSide/Switch".
+        /// </summary>
+        public InputAction @Switch => m_Wrapper.m_PlayerSide_Switch;
+        /// <summary>
+        /// Provides access to the underlying input action map instance.
+        /// </summary>
+        public InputActionMap Get() { return m_Wrapper.m_PlayerSide; }
+        /// <inheritdoc cref="UnityEngine.InputSystem.InputActionMap.Enable()" />
+        public void Enable() { Get().Enable(); }
+        /// <inheritdoc cref="UnityEngine.InputSystem.InputActionMap.Disable()" />
+        public void Disable() { Get().Disable(); }
+        /// <inheritdoc cref="UnityEngine.InputSystem.InputActionMap.enabled" />
+        public bool enabled => Get().enabled;
+        /// <summary>
+        /// Implicitly converts an <see ref="PlayerSideActions" /> to an <see ref="InputActionMap" /> instance.
+        /// </summary>
+        public static implicit operator InputActionMap(PlayerSideActions set) { return set.Get(); }
+        /// <summary>
+        /// Adds <see cref="InputAction.started"/>, <see cref="InputAction.performed"/> and <see cref="InputAction.canceled"/> callbacks provided via <param cref="instance" /> on all input actions contained in this map.
+        /// </summary>
+        /// <param name="instance">Callback instance.</param>
+        /// <remarks>
+        /// If <paramref name="instance" /> is <c>null</c> or <paramref name="instance"/> have already been added this method does nothing.
+        /// </remarks>
+        /// <seealso cref="PlayerSideActions" />
+        public void AddCallbacks(IPlayerSideActions instance)
+        {
+            if (instance == null || m_Wrapper.m_PlayerSideActionsCallbackInterfaces.Contains(instance)) return;
+            m_Wrapper.m_PlayerSideActionsCallbackInterfaces.Add(instance);
+            @Move.started += instance.OnMove;
+            @Move.performed += instance.OnMove;
+            @Move.canceled += instance.OnMove;
+            @Switch.started += instance.OnSwitch;
+            @Switch.performed += instance.OnSwitch;
+            @Switch.canceled += instance.OnSwitch;
+        }
+
+        /// <summary>
+        /// Removes <see cref="InputAction.started"/>, <see cref="InputAction.performed"/> and <see cref="InputAction.canceled"/> callbacks provided via <param cref="instance" /> on all input actions contained in this map.
+        /// </summary>
+        /// <remarks>
+        /// Calling this method when <paramref name="instance" /> have not previously been registered has no side-effects.
+        /// </remarks>
+        /// <seealso cref="PlayerSideActions" />
+        private void UnregisterCallbacks(IPlayerSideActions instance)
+        {
+            @Move.started -= instance.OnMove;
+            @Move.performed -= instance.OnMove;
+            @Move.canceled -= instance.OnMove;
+            @Switch.started -= instance.OnSwitch;
+            @Switch.performed -= instance.OnSwitch;
+            @Switch.canceled -= instance.OnSwitch;
+        }
+
+        /// <summary>
+        /// Unregisters <param cref="instance" /> and unregisters all input action callbacks via <see cref="PlayerSideActions.UnregisterCallbacks(IPlayerSideActions)" />.
+        /// </summary>
+        /// <seealso cref="PlayerSideActions.UnregisterCallbacks(IPlayerSideActions)" />
+        public void RemoveCallbacks(IPlayerSideActions instance)
+        {
+            if (m_Wrapper.m_PlayerSideActionsCallbackInterfaces.Remove(instance))
+                UnregisterCallbacks(instance);
+        }
+
+        /// <summary>
+        /// Replaces all existing callback instances and previously registered input action callbacks associated with them with callbacks provided via <param cref="instance" />.
+        /// </summary>
+        /// <remarks>
+        /// If <paramref name="instance" /> is <c>null</c>, calling this method will only unregister all existing callbacks but not register any new callbacks.
+        /// </remarks>
+        /// <seealso cref="PlayerSideActions.AddCallbacks(IPlayerSideActions)" />
+        /// <seealso cref="PlayerSideActions.RemoveCallbacks(IPlayerSideActions)" />
+        /// <seealso cref="PlayerSideActions.UnregisterCallbacks(IPlayerSideActions)" />
+        public void SetCallbacks(IPlayerSideActions instance)
+        {
+            foreach (var item in m_Wrapper.m_PlayerSideActionsCallbackInterfaces)
+                UnregisterCallbacks(item);
+            m_Wrapper.m_PlayerSideActionsCallbackInterfaces.Clear();
+            AddCallbacks(instance);
+        }
+    }
+    /// <summary>
+    /// Provides a new <see cref="PlayerSideActions" /> instance referencing this action map.
+    /// </summary>
+    public PlayerSideActions @PlayerSide => new PlayerSideActions(this);
     private int m_KeyboardMouseSchemeIndex = -1;
     /// <summary>
     /// Provides access to the input control scheme.
@@ -566,5 +813,34 @@ public partial class @CharacterInput: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnStopJump(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Switch" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnSwitch(InputAction.CallbackContext context);
+    }
+    /// <summary>
+    /// Interface to implement callback methods for all input action callbacks associated with input actions defined by "PlayerSide" which allows adding and removing callbacks.
+    /// </summary>
+    /// <seealso cref="PlayerSideActions.AddCallbacks(IPlayerSideActions)" />
+    /// <seealso cref="PlayerSideActions.RemoveCallbacks(IPlayerSideActions)" />
+    public interface IPlayerSideActions
+    {
+        /// <summary>
+        /// Method invoked when associated input action "Move" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnMove(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Switch" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnSwitch(InputAction.CallbackContext context);
     }
 }

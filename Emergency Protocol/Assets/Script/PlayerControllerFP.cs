@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 
 [RequireComponent(typeof(CharacterController))]
-public class PlayerController : MonoBehaviour
+public class PlayerControllerFP : MonoBehaviour
 {
     public float speed = 5f;
     public float mouseSensitivity = 2f;
@@ -28,9 +28,11 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        //FirstPerson
         Jump();
         HandleMovement();
         HandleLook();
+
     }
 
     public void OnMove(InputAction.CallbackContext context)
