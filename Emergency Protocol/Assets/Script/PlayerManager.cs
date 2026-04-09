@@ -7,7 +7,7 @@ public class PlayerManager : MonoBehaviour
     private PlayerInput playerInput;
     private PlayerControllerFP playerControllerFP;
     private PlayerControllerSide playerControllerSide;
-    public Transform screenCenterTransform;
+    private Transform screenCenterTransform;
     private bool isFirstPerson = true;
     private Camera cameraFP;
     public Camera cameraSide;
