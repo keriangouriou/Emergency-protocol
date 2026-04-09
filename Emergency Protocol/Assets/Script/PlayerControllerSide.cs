@@ -6,7 +6,7 @@ public class PlayerControllerSide : MonoBehaviour
     private CharacterController controller;
 
     private Vector2 moveInput;
-    private float speed = 10f;
+    private float speed = 15f;
     private float screenSpeed;
     private Transform screenCenterTransform;
 

@@ -7,6 +7,7 @@ public class PlayerManager : MonoBehaviour
     private PlayerInput playerInput;
     private PlayerControllerFP playerControllerFP;
     private PlayerControllerSide playerControllerSide;
+    private MeshRenderer playerRenderer;
     private Transform screenCenterTransform;
     private bool isFirstPerson = true;
     private Camera cameraFP;
@@ -20,6 +21,7 @@ public class PlayerManager : MonoBehaviour
         cameraFP = GetComponentInChildren<Camera>();
         screenCenterTransform = GameObject.Find("ScreenCenter").transform;
         screenMoveScript = screenCenterTransform.GetComponent<ScreenCenterMovement>();
+        playerRenderer = GetComponentInChildren<MeshRenderer>();
     }
 
     // Update is called once per frame
@@ -36,7 +38,7 @@ public class PlayerManager : MonoBehaviour
             cameraSide.enabled = true;
             screenMoveScript.enabled = true;
             screenCenterTransform.position = transform.position;
-
+            playerRenderer.enabled = true;
             isFirstPerson = false;
         }
         else
@@ -48,6 +50,7 @@ public class PlayerManager : MonoBehaviour
             cameraSide.enabled = false;
             cameraFP.enabled = true;
             screenMoveScript.enabled = false;
+            playerRenderer.enabled = false;
             isFirstPerson = true;
         }
     }

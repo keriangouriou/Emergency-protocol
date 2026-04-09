@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class ScreenCenterMovement : MonoBehaviour
 {
-    public float screenSpeed = 10f;
+    public float screenSpeed = 20f;
     private Vector3 screenMove;
 
     void Start()
