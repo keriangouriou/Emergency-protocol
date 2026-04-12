@@ -22,6 +22,7 @@ public class PlayerManager : MonoBehaviour
         screenCenterTransform = GameObject.Find("ScreenCenter").transform;
         screenMoveScript = screenCenterTransform.GetComponent<ScreenCenterMovement>();
         playerRenderer = GetComponentInChildren<MeshRenderer>();
+        playerRenderer.enabled = false;
     }
 
     // Update is called once per frame
