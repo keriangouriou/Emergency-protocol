@@ -1,0 +1,222 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1695534288651928088
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2362644127384064036}
+  m_Layer: 0
+  m_Name: LightSmallCorridor
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2362644127384064036
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1695534288651928088}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 1.23}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 3292939438488777594}
+  - {fileID: 6386196890038434523}
+  - {fileID: 6949284283439942690}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &3465554032956028803
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 2362644127384064036}
+    m_Modifications:
+    - target: {fileID: 2137734213531288825, guid: bef915265e9165949bade1b62d31c748, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2137734213531288825, guid: bef915265e9165949bade1b62d31c748, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 4.1574554
+      objectReference: {fileID: 0}
+    - target: {fileID: 2137734213531288825, guid: bef915265e9165949bade1b62d31c748, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2137734213531288825, guid: bef915265e9165949bade1b62d31c748, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2137734213531288825, guid: bef915265e9165949bade1b62d31c748, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2137734213531288825, guid: bef915265e9165949bade1b62d31c748, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2137734213531288825, guid: bef915265e9165949bade1b62d31c748, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2137734213531288825, guid: bef915265e9165949bade1b62d31c748, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2137734213531288825, guid: bef915265e9165949bade1b62d31c748, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2137734213531288825, guid: bef915265e9165949bade1b62d31c748, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5362685673086338638, guid: bef915265e9165949bade1b62d31c748, type: 3}
+      propertyPath: m_Name
+      value: LightSmallCorridorPrefab
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: bef915265e9165949bade1b62d31c748, type: 3}
+--- !u!4 &3292939438488777594 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2137734213531288825, guid: bef915265e9165949bade1b62d31c748, type: 3}
+  m_PrefabInstance: {fileID: 3465554032956028803}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &4974953444168875554
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 2362644127384064036}
+    m_Modifications:
+    - target: {fileID: 2137734213531288825, guid: bef915265e9165949bade1b62d31c748, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2137734213531288825, guid: bef915265e9165949bade1b62d31c748, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 4.28
+      objectReference: {fileID: 0}
+    - target: {fileID: 2137734213531288825, guid: bef915265e9165949bade1b62d31c748, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2137734213531288825, guid: bef915265e9165949bade1b62d31c748, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2137734213531288825, guid: bef915265e9165949bade1b62d31c748, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2137734213531288825, guid: bef915265e9165949bade1b62d31c748, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2137734213531288825, guid: bef915265e9165949bade1b62d31c748, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2137734213531288825, guid: bef915265e9165949bade1b62d31c748, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2137734213531288825, guid: bef915265e9165949bade1b62d31c748, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2137734213531288825, guid: bef915265e9165949bade1b62d31c748, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5362685673086338638, guid: bef915265e9165949bade1b62d31c748, type: 3}
+      propertyPath: m_Name
+      value: LightSmallCorridorPrefab
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: bef915265e9165949bade1b62d31c748, type: 3}
+--- !u!4 &6386196890038434523 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2137734213531288825, guid: bef915265e9165949bade1b62d31c748, type: 3}
+  m_PrefabInstance: {fileID: 4974953444168875554}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &9068579269099112667
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 2362644127384064036}
+    m_Modifications:
+    - target: {fileID: 2137734213531288825, guid: bef915265e9165949bade1b62d31c748, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2137734213531288825, guid: bef915265e9165949bade1b62d31c748, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 4.28
+      objectReference: {fileID: 0}
+    - target: {fileID: 2137734213531288825, guid: bef915265e9165949bade1b62d31c748, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2137734213531288825, guid: bef915265e9165949bade1b62d31c748, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2137734213531288825, guid: bef915265e9165949bade1b62d31c748, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2137734213531288825, guid: bef915265e9165949bade1b62d31c748, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2137734213531288825, guid: bef915265e9165949bade1b62d31c748, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2137734213531288825, guid: bef915265e9165949bade1b62d31c748, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2137734213531288825, guid: bef915265e9165949bade1b62d31c748, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2137734213531288825, guid: bef915265e9165949bade1b62d31c748, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5362685673086338638, guid: bef915265e9165949bade1b62d31c748, type: 3}
+      propertyPath: m_Name
+      value: LightSmallCorridorPrefab (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: bef915265e9165949bade1b62d31c748, type: 3}
+--- !u!4 &6949284283439942690 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2137734213531288825, guid: bef915265e9165949bade1b62d31c748, type: 3}
+  m_PrefabInstance: {fileID: 9068579269099112667}
+  m_PrefabAsset: {fileID: 0}
