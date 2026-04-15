@@ -19,7 +19,7 @@ public class PlayerControllerSide : MonoBehaviour
     private float LimitY;
     private float ClampZ = 12f;
     private float ClampY = 6.5f;
-    public Transform screenCenterTransform;
+    private Transform screenCenterTransform;
 
     private void Awake()
     {

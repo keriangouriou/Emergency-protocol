@@ -11,7 +11,7 @@ public class PlayerManager : MonoBehaviour
     private Transform screenCenterTransform;
     private bool isFirstPerson = true;
     private Camera cameraFP;
-    public Camera cameraSide;
+    private Camera cameraSide;
     private ScreenCenterMovement screenMoveScript;
     void Awake()
     {
@@ -23,6 +23,7 @@ public class PlayerManager : MonoBehaviour
         screenMoveScript = screenCenterTransform.GetComponent<ScreenCenterMovement>();
         playerRenderer = GetComponentInChildren<MeshRenderer>();
         playerRenderer.enabled = false;
+        cameraSide = GameObject.Find("CameraSide").GetComponent<Camera>();
     }
 
     // Update is called once per frame

@@ -818,7 +818,7 @@ GameObject:
   - component: {fileID: 228056811}
   - component: {fileID: 228056810}
   m_Layer: 0
-  m_Name: Side Camera
+  m_Name: CameraSide
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2996,6 +2996,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4dde672aadc5cc745b31f0b8a9ecad84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  characterPrefab: {fileID: 3062916622994450389, guid: aa45315848bd34f43bca9eb7c3937d21, type: 3}
+  character: {fileID: 0}
 --- !u!1 &1228501396
 GameObject:
   m_ObjectHideFlags: 0
@@ -4719,7 +4721,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3455379540880732870, guid: aa45315848bd34f43bca9eb7c3937d21, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.43
+      value: -3.499
       objectReference: {fileID: 0}
     - target: {fileID: 3455379540880732870, guid: aa45315848bd34f43bca9eb7c3937d21, type: 3}
       propertyPath: m_LocalPosition.z

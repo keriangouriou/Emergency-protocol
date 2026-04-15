@@ -14,6 +14,7 @@ public class GameManagerScript : MonoBehaviour
 
     private void Awake()
     {
+        character = GameObject.Find("Character");
         GetCharacterReferences();
         characterSpawnPosition = character.transform.position;
         screenCenterMovement = GameObject.Find("ScreenCenter").GetComponent <ScreenCenterMovement>();
@@ -22,21 +23,19 @@ public class GameManagerScript : MonoBehaviour
     }
     public void Lose()
     {
-        Debug.Log("You lose");
         TurnOff();
         deathScreen.SetActive(true);
     }
     public void Restart()
     {
         Destroy(character);
-        Instantiate(characterPrefab,characterSpawnPosition, Quaternion.identity);
-        GameObject.Find("Character(Clone)").name = "Character";
+        character = Instantiate(characterPrefab,characterSpawnPosition, Quaternion.identity);
+        character.name = "Character";
         GetCharacterReferences();
         deathScreen.SetActive(false);
     }
     private void GetCharacterReferences()
     {
-        character = GameObject.Find("Character");
         playerControllerFP = character.GetComponent<PlayerControllerFP>();
         playerControllerSide = character.GetComponent<PlayerControllerSide>();
     }
