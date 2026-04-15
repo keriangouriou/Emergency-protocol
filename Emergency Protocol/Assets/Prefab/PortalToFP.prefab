@@ -306,6 +306,72 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d62f2b810e42b94a9e02cdb54da2670, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &4941733617213809239
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3071877257669950653}
+  - component: {fileID: 4381117034877845766}
+  - component: {fileID: 1617468532259572351}
+  m_Layer: 0
+  m_Name: InvisibleWall
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3071877257669950653
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4941733617213809239}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 9012346289729657092}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &4381117034877845766
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4941733617213809239}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 10, y: 10, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1617468532259572351
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4941733617213809239}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffe8a551985778d45a1845d2aa490e52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5150183584037506365
 GameObject:
   m_ObjectHideFlags: 0
@@ -317,10 +383,10 @@ GameObject:
   - component: {fileID: 9012346289729657092}
   - component: {fileID: 8527419652614054508}
   - component: {fileID: 255127488310931733}
-  - component: {fileID: 2051654917634837798}
+  - component: {fileID: 7556597198719676094}
   m_Layer: 0
   m_Name: PortalToFP
-  m_TagString: Untagged
+  m_TagString: Portal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -342,6 +408,7 @@ Transform:
   - {fileID: 7702472033844959618}
   - {fileID: 8607813219807788568}
   - {fileID: 3309261000315907528}
+  - {fileID: 3071877257669950653}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &8527419652614054508
@@ -356,7 +423,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 433a704391c8b604ca6d0357b02438ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  invisbleWall: {fileID: 2051654917634837798}
 --- !u!65 &255127488310931733
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -378,24 +444,15 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 9, y: 9, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!65 &2051654917634837798
-BoxCollider:
+--- !u!114 &7556597198719676094
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5150183584037506365}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 0
-  serializedVersion: 3
-  m_Size: {x: 10, y: 10, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b881bae72c73e04494c347cc06dd80a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

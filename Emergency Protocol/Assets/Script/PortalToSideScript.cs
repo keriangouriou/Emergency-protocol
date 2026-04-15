@@ -3,9 +3,13 @@ using UnityEngine;
 
 public class PortalToSideScript : MonoBehaviour
 {
-    public Collider invisbleWall;
+    private Collider invisbleWall;
     private CharacterController characterController;
 
+    private void Awake()
+    {
+        invisbleWall = GetComponentInChildren<GetCollider>().GetColliderInvisWall();
+    }
     private void OnTriggerEnter(Collider col)
     {
         if (col.name == "Character")

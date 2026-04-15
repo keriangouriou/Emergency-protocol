@@ -1,3 +1,5 @@
+using System;
+using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -11,7 +13,6 @@ public class GameManagerScript : MonoBehaviour
     private PlayerControllerSide playerControllerSide;
     private ScreenCenterMovement screenCenterMovement;
     private GameObject deathScreen;
-
     private void Awake()
     {
         character = GameObject.Find("Character");
@@ -32,6 +33,10 @@ public class GameManagerScript : MonoBehaviour
         character = Instantiate(characterPrefab,characterSpawnPosition, Quaternion.identity);
         character.name = "Character";
         GetCharacterReferences();
+        foreach (GameObject go in GameObject.FindGameObjectsWithTag("Portal"))
+        {
+            go.GetComponent<DisableInvisibleWall>().DisableWall();
+        }
         deathScreen.SetActive(false);
     }
     private void GetCharacterReferences()
