@@ -1,8 +1,12 @@
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class GameManagerScript : MonoBehaviour
 {
+    public GameObject characterPrefab;
+    private Vector3 characterSpawnPosition;
+    public GameObject character;
     private PlayerControllerFP playerControllerFP;
     private PlayerControllerSide playerControllerSide;
     private ScreenCenterMovement screenCenterMovement;
@@ -10,8 +14,8 @@ public class GameManagerScript : MonoBehaviour
 
     private void Awake()
     {
-        playerControllerFP = GameObject.Find("Character").GetComponent<PlayerControllerFP>();
-        playerControllerSide = GameObject.Find("Character").GetComponent<PlayerControllerSide>();
+        GetCharacterReferences();
+        characterSpawnPosition = character.transform.position;
         screenCenterMovement = GameObject.Find("ScreenCenter").GetComponent <ScreenCenterMovement>();
         deathScreen = GameObject.Find("DeathScreen");
         deathScreen.SetActive(false);
@@ -24,7 +28,17 @@ public class GameManagerScript : MonoBehaviour
     }
     public void Restart()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        Destroy(character);
+        Instantiate(characterPrefab,characterSpawnPosition, Quaternion.identity);
+        GameObject.Find("Character(Clone)").name = "Character";
+        GetCharacterReferences();
+        deathScreen.SetActive(false);
+    }
+    private void GetCharacterReferences()
+    {
+        character = GameObject.Find("Character");
+        playerControllerFP = character.GetComponent<PlayerControllerFP>();
+        playerControllerSide = character.GetComponent<PlayerControllerSide>();
     }
     private void TurnOff()
     {

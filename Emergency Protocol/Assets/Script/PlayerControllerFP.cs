@@ -73,7 +73,7 @@ public class PlayerControllerFP : MonoBehaviour
         }
         else
         {
-            yVelocity += -13f * Time.deltaTime;
+            yVelocity += -10f * Time.deltaTime;
         }
 
         Vector3 velocity = move * speed;
@@ -105,7 +105,7 @@ public class PlayerControllerFP : MonoBehaviour
         {
             isJumping = true;
             jumpBoostFrame = jumpBoostLenght;
-            yVelocity = 8f;
+            yVelocity = 6f;
         }
 
         if(isJumping == true && yVelocity<0)
