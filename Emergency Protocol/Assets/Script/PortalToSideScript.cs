@@ -15,7 +15,7 @@ public class PortalToSideScript : MonoBehaviour
         if (col.name == "Character")
         {
             characterController = col.GetComponent<CharacterController>();
-            characterController.Move(new Vector3(-col.transform.position.x, -col.transform.position.y, 1));
+            characterController.Move(new Vector3(-col.transform.position.x, -col.transform.position.y, 1.5f));
             invisbleWall.enabled = true;
             col.GetComponent<PlayerManager>().SwitchMode();
         }
