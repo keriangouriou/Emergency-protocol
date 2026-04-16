@@ -31,7 +31,6 @@ public class ChangeScene : MonoBehaviour
         blackScreen.SetActive(true);
         for (int i = 10; i >= 0; i--)
         {
-            Debug.Log("Première boucle, i is equal to" + i);
             blackScreenImage.color = new Color(0,0,0,1 - (0.1f * i));
             yield return new WaitForSeconds(0.05f);
         }
@@ -40,14 +39,12 @@ public class ChangeScene : MonoBehaviour
 
         for (int i = 0; i <= 10; i++)
         {
-            Debug.Log("Deuxième boucle, i is equal to" + i);
             blackScreenImage.color = new Color(0, 0, 0, 1 - (0.1f * i));
             yield return new WaitForSeconds(0.05f);
         }
         yield return new WaitForSeconds(2);
         for (int i = 10; i >= 0; i--)
         {
-            Debug.Log("Première boucle, i is equal to" + i);
             blackScreenImage.color = new Color(0, 0, 0, 1 - (0.1f * i));
             yield return new WaitForSeconds(0.05f);
         }
