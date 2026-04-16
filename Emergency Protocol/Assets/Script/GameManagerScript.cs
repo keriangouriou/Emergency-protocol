@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class GameManagerScript : MonoBehaviour
 {
     public GameObject characterPrefab;
-    private Vector3 characterSpawnPosition;
+    public Vector3 characterSpawnPosition;
     public GameObject character;
     private PlayerControllerFP playerControllerFP;
     private PlayerControllerSide playerControllerSide;

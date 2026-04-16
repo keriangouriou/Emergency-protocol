@@ -7,6 +7,7 @@ public class PlayerControllerFP : MonoBehaviour
     public float speed = 5f;
     public float mouseSensitivity = 2f;
     public Transform cameraPivot;
+    private AudioSource AudioSource;
 
     private CharacterController controller;
 
@@ -24,6 +25,7 @@ public class PlayerControllerFP : MonoBehaviour
     void Awake()
     {
         controller = GetComponent<CharacterController>();
+        AudioSource = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -106,6 +108,7 @@ public class PlayerControllerFP : MonoBehaviour
             isJumping = true;
             jumpBoostFrame = jumpBoostLenght;
             yVelocity = 6f;
+            AudioSource.Play();
         }
 
         if(isJumping == true && yVelocity<0)
