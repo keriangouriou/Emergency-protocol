@@ -19,14 +19,14 @@ public class PlayerManager : MonoBehaviour
         playerControllerFP = GetComponent<PlayerControllerFP>();
         playerControllerSide = GetComponent<PlayerControllerSide>();
         cameraFP = GetComponentInChildren<Camera>();
-        screenCenterTransform = GameObject.Find("ScreenCenter").transform;
-        screenMoveScript = screenCenterTransform.GetComponent<ScreenCenterMovement>();
         playerRenderer = GetComponentInChildren<MeshRenderer>();
         playerRenderer.enabled = false;
+
+        screenCenterTransform = GameObject.Find("ScreenCenter").transform;
+        screenMoveScript = screenCenterTransform.GetComponent<ScreenCenterMovement>();
         cameraSide = GameObject.Find("CameraSide").GetComponent<Camera>();
     }
 
-    // Update is called once per frame
     public void SwitchMode()
     {
         if (isFirstPerson == true)

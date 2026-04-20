@@ -34,7 +34,6 @@ public class PlayerControllerFP : MonoBehaviour
         Jump();
         HandleMovement();
         HandleLook();
-
     }
 
     public void OnMove(InputAction.CallbackContext context)

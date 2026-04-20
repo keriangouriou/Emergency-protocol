@@ -8,9 +8,11 @@ using UnityEngine.UI;
 
 public class GameManagerScript : MonoBehaviour
 {
-    public GameObject characterPrefab;
+    [SerializeField]
+    private GameObject characterPrefab;
     public Vector3 characterSpawnPosition;
     public GameObject character;
+
     private PlayerControllerFP playerControllerFP;
     private PlayerControllerSide playerControllerSide;
     private ScreenCenterMovement screenCenterMovement;
